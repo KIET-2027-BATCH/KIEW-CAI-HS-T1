@@ -1,0 +1,116 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Page Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74EBD5, #ACB6E5);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+/* Container Styling */
+.container {
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 40px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+/* Hover effect for the container */
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+/* Heading Styling */
+h1 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    width: 80%;
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+input:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+}
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #3498db;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+/* Result Styling */
+.result {
+    margin-top: 25px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2ecc71;  /* Green for ham */
+    animation: fadeIn 0.5s;
+}
+/* Spam Result - Red Color */
+.result.spam {
+    color: #e74c3c; /* Red for spam */
+}
+
+/* Footer Styling */
+.footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    button {
+        width: 100%;
+    }
+}
